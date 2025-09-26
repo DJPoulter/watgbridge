@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: watgbridge
     volumes:
-      - ./config.yaml:/go/src/watgbridge/config.yaml
-      - ./gobot.sqlite.db:/go/src/watgbridge/gobot.sqlite.db
-      - ./wawebstore.db:/go/src/watgbridge/wawebstore.db
+      - /portainer/AppData/watgbridge/config.yaml:/app/config.yaml # File to File
+      - /portainer/AppData/watgbridge/sqlite.db:/app/sqlite.db     # File to File
+      - /portainer/AppData/watgbridge/wawebstore.db:/app/wawebstore.db # File to File
     restart: unless-stopped
